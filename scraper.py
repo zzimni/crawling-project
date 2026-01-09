@@ -10,3 +10,9 @@ for row in rows:
 print(f"이름: {tds[0].text}, 나이: {tds[1].text}")
 if __name__ == "__main__":
   get_table_data()
+  
+def save_to_file(data):
+  with open("result.txt", "w", encoding="utf-8") as f: 
+    for name, age in data:
+      f.write(f"이름: {name}, 나이: {age}\\n") 
+      print("result.txt에 저장 완료!")
